@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Table Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #4227ca;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // Create an array of JSON objects
+    const people = [
+      { Name: "Jordan", Age: 32, City: "Pune" },
+      { Name: "Sonal", Age: 25, City: "Lonavala" },
+      { Name: "Gaurav", Age: 1, City: "Pune" }
+    ];
+
+    // Display array in the form of a table
+    document.write("<h2>People Information:</h2>");
+    document.write("<table>");
+    
+    // Table header
+    document.write("<tr>");
+    for (const key in people[0]) {
+      document.write("<th>" + key + "</th>");
+    }
+    document.write("</tr>");
+
+    // Table rows
+    for (const person of people) {
+      document.write("<tr>");
+      for (const key in person) {
+        document.write("<td>" + person[key] + "</td>");
+      }
+      document.write("</tr>");
+    }
+
+    document.write("</table>");
+  </script>
+
+</body>
+</html>

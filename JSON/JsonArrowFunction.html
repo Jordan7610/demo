@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function Examples</title>
+</head>
+<body>
+
+  <h1>Arrow Function Examples</h1>
+
+  <script>
+    // Example 1: Basic Arrow Function
+    const add = function (a, b) {
+      return a + b;
+    };
+
+    const addArrow = (a, b) => a + b;
+
+    document.write("<p>Example 1: Basic Arrow Function</p>");
+    document.write("<p>Result (add): " + add(3, 5) + "</p>");
+    document.write("<p>Result (addArrow): " + addArrow(3, 5) + "</p>");
+
+    // Example 2: Arrow Function with Single Parameter
+    const square = function (x) {
+      return x * x;
+    };
+
+    const squareArrow = x => x * x;
+
+    document.write("<p>Example 2: Arrow Function with Single Parameter</p>");
+    document.write("<p>Result (square): " + square(4) + "</p>");
+    document.write("<p>Result (squareArrow): " + squareArrow(4) + "</p>");
+
+    // Example 3: Arrow Function with No Parameters
+    const greet = function () {
+      return "Hello, World!";
+    };
+
+    const greetArrow = () => "Hello, World!";
+
+    document.write("<p>Example 3: Arrow Function with No Parameters</p>");
+    document.write("<p>Result (greet): " + greet() + "</p>");
+    document.write("<p>Result (greetArrow): " + greetArrow() + "</p>");
+  </script>
+
+</body>
+</html>
+
+
+

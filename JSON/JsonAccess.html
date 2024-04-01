@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Access Example</title>
+</head>
+<body>
+
+  <script>
+    const person = {
+      name: "Jordan",
+      age: 32,
+      address: {
+        city: "Lonavala",
+        zip: "410401"
+      }
+    };
+
+    // TYPE 1   Accessing JSON data using dot notation
+    const personNameDot = person.name;
+    const personAgeDot = person.age;
+    const cityDot = person.address.city;
+    const zipCodeDot = person.address.zip;
+
+    // Type 2  Accessing JSON data using bracket notation
+    const personNameBracket = person["name"];
+    const personAgeBracket = person["age"];
+    const cityBracket = person["address"]["city"];
+    const zipCodeBracket = person["address"]["zip"];
+
+    // Type 3   Accessing JSON data using dynamic property access
+    const propertyName = "name";
+    const dynamicValue = person[propertyName];
+
+    // Displaying data in the browser
+    document.write("<h2>Person Information (Dot Notation):</h2>");
+    document.write("<p>Name: " + personNameDot + "</p>");
+    document.write("<p>Age: " + personAgeDot + "</p>");
+    document.write("<p>City: " + cityDot + "</p>");
+    document.write("<p>Zip Code: " + zipCodeDot + "</p>");
+
+    document.write("<h2>Person Information (Bracket Notation):</h2>");
+    document.write("<p>Name: " + personNameBracket + "</p>");
+    document.write("<p>Age: " + personAgeBracket + "</p>");
+    document.write("<p>City: " + cityBracket + "</p>");
+    document.write("<p>Zip Code: " + zipCodeBracket + "</p>");
+
+    document.write("<h2>Dynamic Property Access:</h2>");
+    document.write("<p>Value using dynamic property access: " + dynamicValue + "</p>");
+  </script>
+
+</body>
+</html>
