@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+    <h1>Array Operations</h1>
+
+    <!-- Original array and length -->
+    <p>Original array: <span id="originalArray"></span></p>
+    <p>Array length: <span id="arrayLength"></span></p>
+
+    <!-- Reversed array -->
+    <button onclick="reverseArray()">Reverse Array</button>
+    <p>Reversed array: <span id="reversedArray"></span></p>
+
+    <!-- Sorted array -->
+    <button onclick="sortArray()">Sort Array</button>
+    <p>Sorted array: <span id="sortedArray"></span></p>
+
+    <!-- Push operation -->
+    <label for="newElement">New Element:</label>
+    <input type="text" id="newElement">
+    <button onclick="pushElement()">Push Element</button>
+    <p>Array after push: <span id="arrayAfterPush"></span></p>
+
+    <!-- Pop operation -->
+    <button onclick="popElement()">Pop Element</button>
+    <p>Array after pop: <span id="arrayAfterPop"></span></p>
+    <p>Removed element: <span id="removedElement"></span></p>
+
+    <script>
+        // JavaScript code goes here
+        let fruits = ['apple', 'banana', 'orange', 'grape'];
+
+        // Function to display array information
+        function displayArrayInfo() {
+            document.getElementById('originalArray').innerText = JSON.stringify(fruits);
+            document.getElementById('arrayLength').innerText = fruits.length;
+        }
+
+        // Function to reverse the array
+        function reverseArray() {
+            fruits.reverse();
+            displayArrayInfo();
+            document.getElementById('reversedArray').innerText = JSON.stringify(fruits);
+        }
+
+        // Function to sort the array
+        function sortArray() {
+            fruits.sort();
+            displayArrayInfo();
+            document.getElementById('sortedArray').innerText = JSON.stringify(fruits);
+        }
+
+        // Function to push a new element to the array
+        function pushElement() {
+            let newElement = document.getElementById('newElement').value;
+            fruits.push(newElement);
+            displayArrayInfo();
+            document.getElementById('arrayAfterPush').innerText = JSON.stringify(fruits);
+        }
+
+        // Function to pop the last element from the array
+        function popElement() {
+            let removedElement = fruits.pop();
+            displayArrayInfo();
+            document.getElementById('arrayAfterPop').innerText = JSON.stringify(fruits);
+            document.getElementById('removedElement').innerText = removedElement;
+        }
+
+        // Initial display
+        displayArrayInfo();
+    </script>
+</body>
+</html>
+
